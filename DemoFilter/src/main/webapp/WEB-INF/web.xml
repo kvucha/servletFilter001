@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>DemoFilter</display-name>
+	<servlet>
+		<servlet-name>SrvltName</servlet-name>
+		<servlet-class>com.kris.AddStudent</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SrvltName</servlet-name>
+		<url-pattern>/AddStudent</url-pattern>
+	</servlet-mapping>
+
+
+	<filter>
+		<filter-name>FltrltName</filter-name>
+		<filter-class>com.kris.IdFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>FltrltName</filter-name>
+		<url-pattern>/AddStudent</url-pattern>
+	</filter-mapping>
+
+</web-app>
